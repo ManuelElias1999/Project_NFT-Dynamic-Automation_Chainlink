@@ -1,28 +1,65 @@
-REMIX DEFAULT WORKSPACE
+# Flower NFT Contract
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+This smart contract implements the creation and evolution of NFTs (Non-Fungible Tokens) representing different stages of flower growth. It utilizes the Chainlink library for automation and OpenZeppelin for ERC721 token standards implementation.
 
-This workspace contains 3 directories:
+## Contract
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+The `Flower.sol` contract contains all the logic for creating, evolving, and maintaining flower NFTs.
 
-SCRIPTS
+### Dependencies
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
+This contract depends on the following Solidity libraries:
 
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
+- Chainlink (for automation)
+- OpenZeppelin (for ERC721 and utilities)
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
+### Installation and Usage Steps
 
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
+1. Clone this repository to your local machine.
 
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+2. Make sure you have Node.js and npm installed.
+
+3. Install project dependencies by running `npm install`.
+
+4. Deploy the contract on an Ethereum network of your choice.
+
+5. Interact with the contract to create and evolve flower NFTs.
+
+### Interacting with the Contract
+
+Once the contract is deployed on an Ethereum network, you can interact with it using a block explorer or a command-line interface like Truffle.
+
+## Post-Deployment Steps to View the NFT
+
+After deploying and using the contract, you can follow these steps to view the created NFTs:
+
+1. Log in with MetaMask on your browser.
+
+2. Click on your profile to access your NFT collection.
+
+3. Select the latest collection to view the created NFTs.
+
+4. To properly display an NFT on OpenSea, follow these steps:
+
+   - Open the NFT on OpenSea.
+   - Click on the three dots in the top right corner.
+   - Select "Update Metadata".
+   - Refresh the page multiple times to ensure the changes are reflected.
+
+## Automation with Chainlink
+
+To automate flower growth, you can use the Chainlink platform by following these steps:
+
+1. Visit [https://automation.chain.link/](https://automation.chain.link/) and connect your wallet.
+
+2. Register a new Upkeep.
+
+3. Customize the automation logic according to your needs.
+
+4. Add the Flower contract address to be used.
+
+5. Register the automation with the name "FlorAuto" and a balance of 3 LINK.
+
+## Note
+
+This README provides basic instructions for deploying and using the Flower contract, as well as for automating its maintenance with Chainlink. Make sure to thoroughly read and understand the code and instructions before interacting with the contract on a real Ethereum network.
